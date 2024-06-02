@@ -1,14 +1,7 @@
 import { useState, useEffect } from "react";
-import {
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiReact,
-  SiLaravel,
-  SiNodeDotJs,
-  SiPython,
-  SiWordpress,
-} from "react-icons/si";
+import { SiCss3, SiJavascript, SiReact, SiTailwindcss } from "react-icons/si";
+import { IoLogoLaravel } from "react-icons/io5";
+import { FaNodeJs } from "react-icons/fa";
 import PropTypes from "prop-types";
 
 const RotatingIcon = ({ icon: Icon, size, delay, radius }) => {
@@ -60,9 +53,10 @@ RotatingIcon.propTypes = {
 // Main component
 const Home = () => {
   // Radius of the first circular path
-  const radius2 = 500; // Radius of the second circular path
-  const radius3 = 600; // Radius of the third circular path
-  const radius4 = 700; // Radius of the fourth circular path
+  const radius2 = 500;
+  const radius5 = 500;
+  const radius3 = 600;
+  const radius4 = 700;
 
   return (
     <div className="bg-slate-950 h-screen flex justify-center items-center relative overflow-hidden">
@@ -80,24 +74,22 @@ const Home = () => {
             }}
           >
             <RotatingIcon icon={SiCss3} size={40} delay={70} radius={radius2} />
-            <RotatingIcon
-              icon={SiHtml5}
-              size={40}
-              delay={70}
-              radius={radius2}
-            />
-            <RotatingIcon
-              icon={SiReact}
-              size={40}
-              delay={70}
-              radius={radius2}
-            />
-            <RotatingIcon
-              icon={SiLaravel}
-              size={40}
-              delay={70}
-              radius={radius2}
-            />
+            <div>
+              <RotatingIcon
+                icon={SiTailwindcss}
+                size={40}
+                delay={70}
+                radius={radius2}
+              />
+            </div>
+            <div >
+              <RotatingIcon
+                icon={IoLogoLaravel}
+                size={40}
+                delay={60}
+                radius={radius5}
+              />
+            </div>
           </div>
           {/* Circular path 3 */}
           <div
@@ -116,24 +108,24 @@ const Home = () => {
               delay={90}
               radius={radius3}
             />
+            <div>
             <RotatingIcon
-              icon={SiNodeDotJs}
+              icon={FaNodeJs}
               size={40}
               delay={90}
               radius={radius3}
             />
-            <RotatingIcon
-              icon={SiPython}
+
+            </div>
+           <div>
+           <RotatingIcon
+              icon={SiJavascript}
               size={40}
               delay={90}
               radius={radius3}
             />
-            <RotatingIcon
-              icon={SiWordpress}
-              size={40}
-              delay={90}
-              radius={radius3}
-            />
+           </div>
+          
           </div>
           {/* Circular path 4 */}
           <div
@@ -153,19 +145,13 @@ const Home = () => {
               radius={radius4}
             />
             <RotatingIcon
-              icon={SiLaravel}
+              icon={SiReact}
               size={40}
               delay={110}
               radius={radius4}
             />
             <RotatingIcon
-              icon={SiNodeDotJs}
-              size={40}
-              delay={110}
-              radius={radius4}
-            />
-            <RotatingIcon
-              icon={SiPython}
+              icon={SiReact}
               size={40}
               delay={110}
               radius={radius4}
