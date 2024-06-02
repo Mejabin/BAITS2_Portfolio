@@ -20,6 +20,7 @@ function App() {
       <Ourclients />
       <Testimonial />
       <Home />
+      {/* comment */}
       <Footer />
     </div>
   );
