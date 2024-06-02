@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.clip-half-circle {
+    clip-path: inset(0 0 50% 0);
+  }
+  
