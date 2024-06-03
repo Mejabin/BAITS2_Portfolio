@@ -1,6 +1,7 @@
 import logo from "../../assets/logoTrans.png";
 import { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import {Link} from "react-router-dom"
 
 const Navbar = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
@@ -32,9 +33,9 @@ const Navbar = () => {
 
         <ul className="flex items-center flex-grow justify-center space-x-6 text-2xl">
           <li>
-            <a href="/" className="text-gray-600 hover:text-gray-400">
+            <Link to="/" className="text-white hover:text-gray-300">
               Home
-            </a>
+            </Link>
           </li>
           <li
             className="relative"
@@ -72,19 +73,19 @@ const Navbar = () => {
           <li>
             <a href="/support" className="text-gray-600 hover:text-gray-400">
               Support
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/careers" className="text-gray-600 hover:text-gray-400">
+            <Link to="/careers" className="text-white hover:text-gray-300">
               Careers
-            </a>
+            </Link>
           </li>
         </ul>
 
         <div className="mr-28 text-2xl">
-          <a href="/login" className="text-gray-600 hover:text-gray-400 ml-6">
-            Login
-          </a>
+          <Link to="/contact" className="text-white hover:text-gray-300 ml-6">
+            Contact
+          </Link>
         </div>
       </div>
     </nav>

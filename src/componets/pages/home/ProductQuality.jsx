@@ -1,5 +1,7 @@
 import p5 from "../../../assets/p5.png";
 
+
+
 const ProductQuality = () => {
   const containerStyle = {
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
