@@ -8,7 +8,7 @@ const ProductQuality = () => {
   return (
     <div
       style={containerStyle}
-      className="mt-12 bg-gray-100 p-4 flex flex-wrap justify-center items-center rounded-b-full mb-32"
+      className="mt-12 bg-gray-200 p-4 flex flex-wrap justify-center items-center rounded-b-full mb-32"
     >
       <div>
         <h1 className="mt-12 text-4xl text-center font-bold">The Home Of Quality</h1>
