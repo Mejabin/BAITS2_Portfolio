@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { SiCss3, SiJavascript, SiReact, SiTailwindcss } from "react-icons/si";
+import { SiCss3, SiJavascript, SiReact, SiTailwindcss , SiTypescript,SiExpress } from "react-icons/si";
+import { DiMongodb } from "react-icons/di";
 import { IoLogoLaravel } from "react-icons/io5";
-import { FaNodeJs } from "react-icons/fa";
+import { FaNodeJs,FaPhp } from "react-icons/fa";
 import PropTypes from "prop-types";
-
-const RotatingIcon = ({ icon: Icon, size, delay, radius }) => {
+const RotatingIcon = ({ icon: Icon, size, delay, radius, color }) => {
   const [rotation, setRotation] = useState(-160);
   const [direction, setDirection] = useState(1);
 
@@ -36,8 +36,8 @@ const RotatingIcon = ({ icon: Icon, size, delay, radius }) => {
         transform: "translate(-50%, -50%)",
       }}
     >
-      <div className="p-6 bg-gradient-to-br from-gray-200 rounded-full">
-        <Icon size={size} />
+      <div className="p-6 bg-white/90  rounded-full">
+        <Icon size={size} color={color} />
       </div>
     </div>
   );
@@ -48,18 +48,34 @@ RotatingIcon.propTypes = {
   size: PropTypes.number.isRequired,
   delay: PropTypes.number.isRequired,
   radius: PropTypes.number.isRequired,
+  color: PropTypes.string,
+};
+
+RotatingIcon.defaultProps = {
+  color: "#000000", // default color if none is provided
+};
+
+
+RotatingIcon.propTypes = {
+  icon: PropTypes.elementType.isRequired,
+  size: PropTypes.number.isRequired,
+  delay: PropTypes.number.isRequired,
+  radius: PropTypes.number.isRequired,
+  color: PropTypes.string,
+};
+RotatingIcon.defaultProps = {
+  color: "#000000", // default color if none is provided
 };
 
 // Main component
 const Home = () => {
-  // Radius of the first circular path
   const radius2 = 500;
   const radius5 = 500;
   const radius3 = 600;
   const radius4 = 700;
 
   return (
-    <div className="bg-slate-950 h-screen flex justify-center items-center relative overflow-hidden">
+    <div className="bg-[#0A0C3E] h-screen flex justify-center items-center relative overflow-hidden">
       <div className="-mb-[70rem]">
         <div className="relative">
           {/* Circular path 2 */}
@@ -73,22 +89,15 @@ const Home = () => {
               transform: "translate(-50%, -50%)",
             }}
           >
-            <RotatingIcon icon={SiCss3} size={40} delay={70} radius={radius2} />
+            <RotatingIcon icon={SiCss3} size={40} delay={90} radius={radius2} color="#264de4" />
             <div>
-              <RotatingIcon
-                icon={SiTailwindcss}
-                size={40}
-                delay={70}
-                radius={radius2}
-              />
+              <RotatingIcon icon={SiTailwindcss} size={40} delay={100} radius={radius2} color="#38B2AC" />
             </div>
-            <div >
-              <RotatingIcon
-                icon={IoLogoLaravel}
-                size={40}
-                delay={60}
-                radius={radius5}
-              />
+            <div>
+              <RotatingIcon icon={IoLogoLaravel} size={40} delay={80} radius={radius5} color="#FF2D20" />
+            </div>
+            <div>
+              <RotatingIcon icon={FaPhp} size={40} delay={80} radius={radius5} color="#5F7ABF" />
             </div>
           </div>
           {/* Circular path 3 */}
@@ -102,30 +111,13 @@ const Home = () => {
               transform: "translate(-50%, -50%)",
             }}
           >
-            <RotatingIcon
-              icon={SiJavascript}
-              size={40}
-              delay={90}
-              radius={radius3}
-            />
+            <RotatingIcon icon={SiJavascript} size={40} delay={40} radius={radius3} color="#F7DF1E" />
             <div>
-            <RotatingIcon
-              icon={FaNodeJs}
-              size={40}
-              delay={90}
-              radius={radius3}
-            />
-
+              <RotatingIcon icon={FaNodeJs} size={40} delay={50} radius={radius3} color="#6FA361" />
             </div>
-           <div>
-           <RotatingIcon
-              icon={SiJavascript}
-              size={40}
-              delay={90}
-              radius={radius3}
-            />
-           </div>
-          
+            <div>
+              <RotatingIcon icon={SiJavascript} size={40} delay={70} radius={radius3} color="#F7DF1E" />
+            </div>
           </div>
           {/* Circular path 4 */}
           <div
@@ -138,24 +130,10 @@ const Home = () => {
               transform: "translate(-50%, -50%)",
             }}
           >
-            <RotatingIcon
-              icon={SiReact}
-              size={40}
-              delay={110}
-              radius={radius4}
-            />
-            <RotatingIcon
-              icon={SiReact}
-              size={40}
-              delay={110}
-              radius={radius4}
-            />
-            <RotatingIcon
-              icon={SiReact}
-              size={40}
-              delay={110}
-              radius={radius4}
-            />
+            <RotatingIcon icon={SiTypescript} size={40} delay={110} radius={radius4} color="#61DAFB" />
+            <RotatingIcon icon={SiExpress} size={40} delay={110} radius={radius4} color="#61DAFB" />
+            <RotatingIcon icon={DiMongodb} size={40} delay={110} radius={radius4} color="#099E42" />
+            <RotatingIcon icon={SiReact} size={40} delay={110} radius={radius4} color="#61DAFB" />
           </div>
         </div>
       </div>
@@ -164,3 +142,4 @@ const Home = () => {
 };
 
 export default Home;
+

@@ -13,13 +13,14 @@ function App() {
   return (
     <div>
       <Navbar />
+      <Home />
       <Product />
       <Features />
       <Company />
       <ProductQuality />
       <Ourclients />
       <Testimonial />
-      <Home />
+    
       {/* comment */}
       <Footer />
     </div>
