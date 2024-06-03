@@ -4,9 +4,10 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/f
 const Footer = () => {
   return (
     <footer className="">
-      <div className=" mx-auto text-center text-white bg-gray-800 py-8" >
+      <div className=" mx-auto text-center text-white bg-sky-950 py-8" >
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Left section: Company information */}
+          
           <div className="mb-4 mx-4 ">
             <img
               src={logo}// Path to your company logo

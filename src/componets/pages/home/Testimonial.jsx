@@ -1,4 +1,5 @@
-import  { useState } from 'react';
+import { useState } from 'react';
+import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 import femaleImage from "../../../assets/female.jpeg";
 
 const TestimonialPage = () => {
@@ -8,14 +9,13 @@ const TestimonialPage = () => {
       image: femaleImage 
     },
     {
-      message: "Some of our clients have seen a 62% increase in response rate with texting!",
+      message: "Hi, Jack. Welcome! You'll be the first to know about deals, new products, and more",
       image: femaleImage
     },
     {
       message: "Some of our clients have seen a 62% increase in response rate with texting!",
       image: femaleImage
     },
-    
   ];
 
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
@@ -29,22 +29,23 @@ const TestimonialPage = () => {
   };
 
   return (
-    <div className='bg-gray-100 p-4'>
-        <h1 className='text-4xl text-center'>
-            Testimonials
-        </h1>
-        <p className='text-4xl text-center'>See! What Say Our Clients</p>
-        <div className="flex justify-center items-center" >
-      <div className=" mt-8">
-        <img src={testimonials[currentTestimonialIndex].image} alt="" className='h-44 w-44' />
-        <p>{testimonials[currentTestimonialIndex].message}</p>
+    <div className="bg-gray-300 p-12 mb-4 border rounded-lg flex flex-col items-center">
+      <h1 className="text-4xl text-center">
+        Testimonials
+      </h1>
+      <p className="text-2xl text-center mt-2">See! What Our Clients Say</p>
+      <div className="flex items-center mt-8 space-x-8">
+        <button className="font-bold text-4xl h-16 w-16 flex justify-center items-center" onClick={goToPreviousTestimonial}>&#8592;</button>
+        <div className="flex flex-col items-center">
+          <img src={testimonials[currentTestimonialIndex].image} alt="Client" className="h-80 w-80 mb-4 rounded-full" />
+          <div className="text-justify p-4 border rounded-lg h-24 overflow-hidden text-ellipsis flex items-center space-x-2">
+            <FaQuoteLeft className="text-gray-400 text-2xl" />
+            <p className="flex-1">{testimonials[currentTestimonialIndex].message}</p>
+            <FaQuoteRight className="text-gray-400 text-2xl" />
+          </div>
+        </div>
+        <button className="font-bold text-4xl h-16 w-16 flex justify-center items-center" onClick={goToNextTestimonial}>&#8594;</button>
       </div>
-      <div className="navigation ">
-        <button className='font-bold gap-8' onClick={goToPreviousTestimonial}>&#8592; Previous</button>
-        <button className='font-bold' onClick={goToNextTestimonial}>Next &#8594;</button>
-      </div>
-    </div>
-
     </div>
   );
 };
