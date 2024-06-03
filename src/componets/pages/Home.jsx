@@ -40,7 +40,7 @@ const RotatingIcon = ({ icon: Icon, size, delay, radius, color }) => {
 
   return (
     <div
-      className="absolute"
+      className={`absolute ${hovered ? 'hovered' : ''}`}
       style={{
         top: `calc(50% + ${iconTop}px)`,
         left: `calc(50% + ${iconLeft}px)`,
@@ -50,7 +50,7 @@ const RotatingIcon = ({ icon: Icon, size, delay, radius, color }) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="p-6 bg-white/90 rounded-full">
+      <div className="p-6 bg-white/85 rounded-full">
         <Icon size={size} color={color} />
       </div>
     </div>
@@ -79,46 +79,55 @@ const Home = () => {
     <div className="bg-[#0A0C3E] h-screen flex justify-center items-center relative overflow-hidden">
       <div className="-mb-[70rem]">
         <div className="relative">
-          {/* Circular path 2 */}
-          <div
-            className="border-gray-600 border rounded-full absolute"
-            style={{
-              width: radius2 * 2,
-              height: radius2 * 2,
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              zIndex: 3,
-            }}
-          >
-            <RotatingIcon
-              icon={SiCss3}
-              size={40}
-              delay={90}
-              radius={radius2}
-              color="#264de4"
-            />
-            <RotatingIcon
-              icon={SiTailwindcss}
-              size={40}
-              delay={100}
-              radius={radius2}
-              color="#38B2AC"
-            />
-            <RotatingIcon
-              icon={IoLogoLaravel}
-              size={40}
-              delay={70}
-              radius={radius5}
-              color="#FF2D20"
-            />
-            <RotatingIcon
-              icon={FaPhp}
-              size={40}
-              delay={80}
-              radius={radius5}
-              color="#5F7ABF"
-            />
+          <div className="position-relative">
+            {/* Circular path 2 */}
+            <div
+              className="border-gray-600 border rounded-full absolute"
+              style={{
+                width: radius2 * 2,
+                height: radius2 * 2,
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                zIndex: 3,
+              }}
+            >
+              <RotatingIcon
+                icon={SiCss3}
+                size={35}
+                delay={90}
+                radius={radius2}
+                color="#264de4"
+              />
+              <RotatingIcon
+                icon={SiTailwindcss}
+                size={35}
+                delay={100}
+                radius={radius2}
+                color="#38B2AC"
+              />
+              <RotatingIcon
+                icon={IoLogoLaravel}
+                size={35}
+                delay={70}
+                radius={radius5}
+                color="#FF2D20"
+              />
+              <RotatingIcon
+                icon={FaPhp}
+                size={35}
+                delay={80}
+                radius={radius5}
+                color="#5F7ABF"
+              />
+            </div>
+         
+            <div
+              className="text-white text-5xl font-bold absolute bottom-0 left-1/2 transform -translate-x-1/2"
+              style={{ yIndex: 2 }}
+            >
+              Hello
+            </div>
           </div>
           {/* Circular path 3 */}
           <div
@@ -134,21 +143,21 @@ const Home = () => {
           >
             <RotatingIcon
               icon={SiJavascript}
-              size={40}
+              size={35}
               delay={40}
               radius={radius3}
               color="#F7DF1E"
             />
             <RotatingIcon
               icon={FaNodeJs}
-              size={40}
+              size={35}
               delay={50}
               radius={radius3}
               color="#6FA361"
             />
             <RotatingIcon
               icon={SiJavascript}
-              size={40}
+              size={35}
               delay={70}
               radius={radius3}
               color="#F7DF1E"
@@ -168,36 +177,38 @@ const Home = () => {
           >
             <RotatingIcon
               icon={SiTypescript}
-              size={40}
+              size={35}
               delay={100}
               radius={radius4}
               color="#007ACC"
             />
             <RotatingIcon
               icon={SiExpress}
-              size={40}
+              size={35}
               delay={60}
               radius={radius4}
               color="#000000"
             />
             <RotatingIcon
               icon={DiMongodb}
-              size={40}
+              size={35}
               delay={110}
               radius={radius4}
               color="#099E42"
             />
             <RotatingIcon
               icon={SiReact}
-              size={40}
+              size={35}
               delay={70}
               radius={radius4}
-              color="#61DAFB"
-            />
+              color="#61DAFB
+              "
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+   
   );
 };
 
