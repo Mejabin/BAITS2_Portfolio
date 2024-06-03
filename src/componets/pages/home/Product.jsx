@@ -8,7 +8,7 @@ const Product = () => {
     <div className="bg-gray-100 text-black py-24 mt-8 p-8 ">
       <div className="container mx-auto text-center">
         <h1 className="text-4xl font-bold mb-4">Dedicated Product Company</h1>
-        <h1 className="text-2xl font-bold mb-4">Enhance Your Web Building Experience</h1>
+        <h1 className="text-2xl  mb-4">Enhance Your Web Building Experience</h1>
         <p className="text-lg mb-8">Explore our range of products designed to make your web development journey smoother.</p>
         <div className="flex justify-center items-center gap-36">
           <div className=" ">
