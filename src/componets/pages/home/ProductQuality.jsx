@@ -4,13 +4,13 @@ import p5 from "../../../assets/p5.png";
 
 const ProductQuality = () => {
   const containerStyle = {
-    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0% 100%)",
   };
 
   return (
     <div
       style={containerStyle}
-      className="mt-12 bg-gray-200 p-4 flex flex-wrap justify-center items-center rounded-b-full mb-32"
+      className="mt-12 bg-gray-200 p-4 flex flex-wrap justify-center items-center rounded-lg mb-32"
     >
       <div>
         <h1 className="mt-12 text-4xl text-center font-bold">The Home Of Quality</h1>

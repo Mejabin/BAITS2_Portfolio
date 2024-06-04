@@ -27,21 +27,6 @@ const Navbar = () => {
       title: "Essential Addons for Elementor",
       des: "Enhance your Elementor page building experience with 80+ amazing widgets",
     },
-    {
-      icon: <DiGithubFull />,
-      title: "Essential Addons for Elementor",
-      des: "Enhance your Elementor page building experience with 80+ amazing widgets",
-    },
-    {
-      icon: <DiGithubFull />,
-      title: "Essential Addons for Elementor",
-      des: "Enhance your Elementor page building experience with 80+ amazing widgets",
-    },
-    {
-      icon: <DiGithubFull />,
-      title: "Essential Addons for Elementor",
-      des: "Enhance your Elementor page building experience with 80+ amazing widgets",
-    },
   ];
   // const [dropdownVisible, setDropdownVisible] = useState(false);
 
