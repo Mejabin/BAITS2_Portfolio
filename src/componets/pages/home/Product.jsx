@@ -5,7 +5,7 @@ import m2 from '../../../assets/m2.png';
 
 const Product = () => {
   return (
-    <div className="bg-gray-100 text-black py-24 mt-8 p-8 ">
+    <div className="bg-gray-100 text-black py-24 mt-0 p-8 ">
       <div className="container mx-auto text-center">
         <h1 className="text-4xl font-bold mb-4">Dedicated Product Company</h1>
         <h1 className="text-2xl  mb-4">Enhance Your Web Building Experience</h1>

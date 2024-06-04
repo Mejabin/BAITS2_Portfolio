@@ -33,8 +33,13 @@ const Navbar = () => {
 
         <ul className="flex items-center flex-grow justify-center space-x-6 text-2xl">
           <li>
-            <Link to="/" className="text-white hover:text-gray-300">
+            <Link to="/" className="text-black hover:text-gray-300">
               Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="text-black hover:text-gray-300">
+              About
             </Link>
           </li>
           <li
@@ -71,19 +76,19 @@ const Navbar = () => {
             )}
           </li>
           <li>
-            <a href="/support" className="text-gray-600 hover:text-gray-400">
+            <Link href="/support" className="text-black hover:text-gray-400">
               Support
             </Link>
           </li>
           <li>
-            <Link to="/careers" className="text-white hover:text-gray-300">
+            <Link to="/careers" className="text-black hover:text-gray-300">
               Careers
             </Link>
           </li>
         </ul>
 
         <div className="mr-28 text-2xl">
-          <Link to="/contact" className="text-white hover:text-gray-300 ml-6">
+          <Link to="/contact" className="text-black hover:text-gray-300 ml-6">
             Contact
           </Link>
         </div>

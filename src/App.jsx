@@ -6,14 +6,13 @@ import ProductQuality from "./componets/pages/home/ProductQuality";
 import Ourclients from "./componets/pages/home/Ourclients";
 import Footer from "./componets/pages/Footer";
 import Home from "./componets/pages/Home";
-import Navbar from "./componets/pages/Navbar";
 import Testimonial from "./componets/pages/home/Testimonial";
 
 function App() {
   return (
     <div>
     
-      <Navbar />
+     
       <Home />
       <Product />
       <Features />
