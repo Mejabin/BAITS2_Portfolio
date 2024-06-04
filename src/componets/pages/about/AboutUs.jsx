@@ -6,6 +6,9 @@ import ValuesImage from "../../../assets/values.png";
 import raffin from "../../../assets/raffin.png";
 import Asma from "../../../assets/Asma.png";
 import sami from "../../../assets/sami.jpg";
+import sayem from "../../../assets/sayem.jpeg";
+import tanvir from "../../../assets/tanvir.png";
+import rashed from "../../../assets/rashed.jpeg";
 import Mehzabin from "../../../assets/Mehzabin.jpg";
 import Ajmira from "../../../assets/Ajmira.png";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
@@ -100,7 +103,44 @@ const AboutUs = () => {
       },
     },
     {
+      id: 1,
+      name: "Abu Saadat Md. Sayem",
+      position: "Senior Software Developer",
+      image: sayem,
+      socials: {
+        facebook: "",
+        twitter: "",
+        linkedin: "",
+        github: "",
+      },
+    },
+    {
       id: 2,
+      name: "Tanvir Hossain Sadi",
+      position: "Jr.Software Developer",
+      image: tanvir,
+      socials: {
+        facebook: "",
+        twitter: "",
+        linkedin: "",
+        github: "",
+      },
+    },
+   
+    {
+      id: 3,
+      name: "M.H. Rashed",
+      position: "Business Developer",
+      image: rashed,
+      socials: {
+        facebook: "",
+        twitter: "",
+        linkedin: "",
+        github: "",
+      },
+    },
+    {
+      id: 1,
       name: "sabbir Mohammad Sami",
       position: "Jr.Software Developer",
       image: sami,
@@ -112,7 +152,7 @@ const AboutUs = () => {
       },
     },
     {
-      id: 3,
+      id: 2,
       name: "Tasnim Mehzabin Khan",
       position: "Jr. Software Developer",
       image: Mehzabin,
@@ -124,7 +164,7 @@ const AboutUs = () => {
       },
     },
     {
-      id: 4,
+      id: 3,
       name: "Ajmira",
       position: "Jr. Software Developer",
       image: Ajmira,

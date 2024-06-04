@@ -61,6 +61,11 @@ const Navbar = () => {
               Home
             </Link>
           </li>
+          <li>
+            <Link to="/about" className="text-gray-600 hover:text-gray-400">
+              About
+            </Link>
+          </li>
           <CustomDropdown
             trigger={
               <a
