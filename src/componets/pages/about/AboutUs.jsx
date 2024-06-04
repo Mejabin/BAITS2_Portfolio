@@ -7,7 +7,7 @@ import raffin from "../../../assets/raffin.png";
 import Asma from "../../../assets/Asma.png";
 import sami from "../../../assets/sami.jpg";
 import sayem from "../../../assets/sayem.jpeg";
-import tanvir from "../../../assets/tanvir.png";
+// import tanvir from "../../../assets/tanvir.png";
 import rashed from "../../../assets/rashed.jpeg";
 import Mehzabin from "../../../assets/Mehzabin.jpg";
 import Ajmira from "../../../assets/Ajmira.png";
@@ -115,31 +115,6 @@ const AboutUs = () => {
       },
     },
     {
-      id: 2,
-      name: "Tanvir Hossain Sadi",
-      position: "Jr.Software Developer",
-      image: tanvir,
-      socials: {
-        facebook: "",
-        twitter: "",
-        linkedin: "",
-        github: "",
-      },
-    },
-   
-    {
-      id: 3,
-      name: "M.H. Rashed",
-      position: "Business Developer",
-      image: rashed,
-      socials: {
-        facebook: "",
-        twitter: "",
-        linkedin: "",
-        github: "",
-      },
-    },
-    {
       id: 1,
       name: "sabbir Mohammad Sami",
       position: "Jr.Software Developer",
@@ -168,6 +143,18 @@ const AboutUs = () => {
       name: "Ajmira",
       position: "Jr. Software Developer",
       image: Ajmira,
+      socials: {
+        facebook: "",
+        twitter: "",
+        linkedin: "",
+        github: "",
+      },
+    },
+    {
+      id: 3,
+      name: "M.H. Rashed",
+      position: "Business Developer",
+      image: rashed,
       socials: {
         facebook: "",
         twitter: "",
@@ -211,8 +198,8 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className=" mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 mt-4 p-28 ">
+      <div className="mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 mt-4 p-28">
           {sections.map((section, index) => (
             <div
               key={section.id}
@@ -255,29 +242,47 @@ const AboutUs = () => {
       </div>
 
       <div className="mt-2">
-        <h1 className="text-center text-4xl font-bold">Meet Our Team</h1>
+        <h1 className="text-center text-4xl font-bold text-[#01723C]">
+          Meet Our Team
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4 p-12">
           {teamMembers.map((member) => (
             <div key={member.id} className="flex flex-col items-center">
               <img
                 src={member.image}
                 alt={member.name}
-                className="h-[200px] w-[200px] rounded-full"
+                className="h-[200px] w-[200px] rounded-full border-green-700 border-2"
               />
               <h1 className="mt-1 text-lg font-bold">{member.name}</h1>
               <p className="mt-1 text-lg font-bold">{member.position}</p>
               <div className="flex flex-row justify-center gap-2 mt-2">
-                <Link target="_blank" to={member.socials.facebook} className="p-2">
-                  <FaFacebookF className="h-6 w-6 text-black " />
+                <Link
+                  target="_blank"
+                  to={member.socials.facebook}
+                  className="p-2"
+                >
+                  <FaFacebookF className="h-6 w-6 text-[#01723C]" />
                 </Link>
-                <Link target="_blank" to={member.socials.twitter} className=" p-2 ">
-                  <FaTwitter className="h-6 w-6 text-black " />
+                <Link
+                  target="_blank"
+                  to={member.socials.twitter}
+                  className="p-2"
+                >
+                  <FaTwitter className="h-6 w-6 text-[#01723C]" />
                 </Link>
-                <Link target="_blank" to={member.socials.linkedin} className=" p-2 ">
-                  <FaLinkedinIn className="h-6 w-6 text-black " />
+                <Link
+                  target="_blank"
+                  to={member.socials.linkedin}
+                  className="p-2"
+                >
+                  <FaLinkedinIn className="h-6 w-6 text-[#01723C]" />
                 </Link>
-                <Link target="_blank" to={member.socials.github} className=" p-2 ">
-                  <FaGithub className="h-6 w-6 text-black " />
+                <Link
+                  target="_blank"
+                  to={member.socials.github}
+                  className="p-2"
+                >
+                  <FaGithub className="h-6 w-6 text-[#01723C]" />
                 </Link>
               </div>
             </div>
