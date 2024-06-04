@@ -93,7 +93,7 @@ const Navbar = () => {
         </ul>
 
         <div className="mr-28 text-2xl">
-          <Link to="/contact" className="text-white hover:text-gray-300 ml-6">
+          <Link to="/contact" className="text-black hover:text-gray-300 ml-6">
             Contact
           </Link>
         </div>

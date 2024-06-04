@@ -103,7 +103,7 @@ const AboutUs = () => {
       },
     },
     {
-      id: 1,
+      id: 3,
       name: "Abu Saadat Md. Sayem",
       position: "Senior Software Developer",
       image: sayem,
@@ -115,7 +115,7 @@ const AboutUs = () => {
       },
     },
     {
-      id: 2,
+      id: 4,
       name: "Tanvir Hossain Sadi",
       position: "Jr.Software Developer",
       image: tanvir,
@@ -126,9 +126,8 @@ const AboutUs = () => {
         github: "",
       },
     },
-   
     {
-      id: 3,
+      id: 5,
       name: "M.H. Rashed",
       position: "Business Developer",
       image: rashed,
@@ -140,8 +139,8 @@ const AboutUs = () => {
       },
     },
     {
-      id: 1,
-      name: "sabbir Mohammad Sami",
+      id: 6,
+      name: "Sabbir Mohammad Sami",
       position: "Jr.Software Developer",
       image: sami,
       socials: {
@@ -152,7 +151,7 @@ const AboutUs = () => {
       },
     },
     {
-      id: 2,
+      id: 7,
       name: "Tasnim Mehzabin Khan",
       position: "Jr. Software Developer",
       image: Mehzabin,
@@ -164,7 +163,7 @@ const AboutUs = () => {
       },
     },
     {
-      id: 3,
+      id: 8,
       name: "Ajmira",
       position: "Jr. Software Developer",
       image: Ajmira,
@@ -240,7 +239,7 @@ const AboutUs = () => {
 
       <div className="mb-8 p-12 bg-gray-100">
         <p className="text-center text-3xl mt-2 font-bold">Why Choose Us</p>
-        <div className="p-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="p-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((item) => (
             <div className="flex items-start" key={item.id}>
               <p className="text-4xl font-bold mr-4">{item.id}</p>
