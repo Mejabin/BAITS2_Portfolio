@@ -4,9 +4,11 @@ import MissionImage from "../../../assets/mission.png";
 import VisionImage from "../../../assets/vission.png";
 import ValuesImage from "../../../assets/values.png";
 import raffin from "../../../assets/raffin.png";
+import Asma from "../../../assets/Asma.png";
+import sami from "../../../assets/sami.jpg";
 import Mehzabin from "../../../assets/Mehzabin.jpg";
-import { FaFacebookF } from "react-icons/fa";
-import { FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa6";
+import Ajmira from "../../../assets/Ajmira.png";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 const AboutUs = () => {
   const items = [
@@ -72,6 +74,69 @@ const AboutUs = () => {
     },
   ];
 
+  const teamMembers = [
+    {
+      id: 1,
+      name: "Md. Raffin Hossain",
+      position: "Senior Software Developer",
+      image: raffin,
+      socials: {
+        facebook: "",
+        twitter: "",
+        linkedin: "",
+        github: "",
+      },
+    },
+    {
+      id: 2,
+      name: "Asma Akter",
+      position: "Senior Software Developer",
+      image: Asma,
+      socials: {
+        facebook: "",
+        twitter: "",
+        linkedin: "",
+        github: "",
+      },
+    },
+    {
+      id: 2,
+      name: "sabbir Mohammad Sami",
+      position: "Jr.Software Developer",
+      image: sami,
+      socials: {
+        facebook: "",
+        twitter: "",
+        linkedin: "",
+        github: "",
+      },
+    },
+    {
+      id: 3,
+      name: "Tasnim Mehzabin Khan",
+      position: "Jr. Software Developer",
+      image: Mehzabin,
+      socials: {
+        facebook: "",
+        twitter: "",
+        linkedin: "",
+        github: "",
+      },
+    },
+    {
+      id: 4,
+      name: "Ajmira",
+      position: "Jr. Software Developer",
+      image: Ajmira,
+      socials: {
+        facebook: "",
+        twitter: "",
+        linkedin: "",
+        github: "",
+      },
+    },
+  ];
+
   return (
     <div>
       <div
@@ -105,11 +170,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      {/* <div className="mt-4 p-8">
-        <h1 className="text-black text-center text-6xl font-bold">About Us</h1>
-      </div> */}
 
-      {/* mission,vission,values */}
       <div className=" mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 mt-4 p-28 ">
           {sections.map((section, index) => (
@@ -136,7 +197,7 @@ const AboutUs = () => {
           ))}
         </div>
       </div>
-      {/* why choose us */}
+
       <div className="mb-8 p-12 bg-gray-100">
         <p className="text-center text-3xl mt-2 font-bold">Why Choose Us</p>
         <div className="p-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -153,86 +214,34 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* Our team section */}
       <div className="mt-2">
         <h1 className="text-center text-4xl font-bold">Meet Our Team</h1>
-        <div className=" grid grid-cols-1 md:grid-cols-3 mt-4 gap-4 ">
-          <div className=" p-12 flex flex-col justify-center items-center">
-            <img
-              src={raffin}
-              alt="raffinda"
-              className="h-[200px] w-[200px] rounded-full"
-            />
-            <h1 className="mt-1 text-lg font-bold">Md. Raffin Hossain</h1>
-            <p className="mt-1 text-lg font-bold">Senior Software Developer</p>
-
-            <div className="flex flex-row justify-center gap-2">
-              <Link target="_blank" to="" className=" p-2 ">
-                <FaFacebookF className="h-6 w-6 text-black " />
-              </Link>
-              <Link target="_blank" to="" className=" p-2 ">
-                <FaTwitter className="h-6 w-6 text-black " />
-              </Link>
-              <Link target="_blank" to="" className=" p-2 ">
-                <FaLinkedinIn className="h-6 w-6 text-black " />
-              </Link>
-
-              <Link target="_blank" to="" className=" p-2 ">
-                <FaGithub className="h-6 w-6 text-black " />
-              </Link>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4 p-12">
+          {teamMembers.map((member) => (
+            <div key={member.id} className="flex flex-col items-center">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="h-[200px] w-[200px] rounded-full"
+              />
+              <h1 className="mt-1 text-lg font-bold">{member.name}</h1>
+              <p className="mt-1 text-lg font-bold">{member.position}</p>
+              <div className="flex flex-row justify-center gap-2 mt-2">
+                <Link target="_blank" to={member.socials.facebook} className="p-2">
+                  <FaFacebookF className="h-6 w-6 text-black " />
+                </Link>
+                <Link target="_blank" to={member.socials.twitter} className=" p-2 ">
+                  <FaTwitter className="h-6 w-6 text-black " />
+                </Link>
+                <Link target="_blank" to={member.socials.linkedin} className=" p-2 ">
+                  <FaLinkedinIn className="h-6 w-6 text-black " />
+                </Link>
+                <Link target="_blank" to={member.socials.github} className=" p-2 ">
+                  <FaGithub className="h-6 w-6 text-black " />
+                </Link>
+              </div>
             </div>
-          </div>
-          <div className=" p-12 flex flex-col justify-center items-center">
-            <img
-              src={Mehzabin}
-              alt="raffinda"
-              className="h-[200px] w-[200px] rounded-full"
-            />
-            <h1 className="mt-1 text-lg font-bold">Tasnim Mehzabin Khan</h1>
-            <p className="mt-1 text-lg font-bold">Jr.Software Developer</p>
-
-            <div className="flex flex-row justify-center gap-2">
-              <Link target="_blank" to="" className=" p-2 ">
-                <FaFacebookF className="h-6 w-6 text-black " />
-              </Link>
-              <Link target="_blank" to="" className=" p-2 ">
-                <FaTwitter className="h-6 w-6 text-black " />
-              </Link>
-              <Link target="_blank" to="" className=" p-2 ">
-                <FaLinkedinIn className="h-6 w-6 text-black " />
-              </Link>
-
-              <Link target="_blank" to="" className=" p-2 ">
-                <FaGithub className="h-6 w-6 text-black " />
-              </Link>
-            </div>
-          </div>
-          <div className=" p-12 flex flex-col justify-center items-center">
-            <img
-              src={Mehzabin}
-              alt="raffinda"
-              className="h-[200px] w-[200px] rounded-full"
-            />
-            <h1 className="mt-1 text-lg font-bold">Md. Raffin Hossain</h1>
-            <p className="mt-1 text-lg font-bold">Senior Software Developer</p>
-
-            <div className="flex flex-row justify-center gap-2">
-              <Link target="_blank" to="" className=" p-2 ">
-                <FaFacebookF className="h-6 w-6 text-black " />
-              </Link>
-              <Link target="_blank" to="" className=" p-2 ">
-                <FaTwitter className="h-6 w-6 text-black " />
-              </Link>
-              <Link target="_blank" to="" className=" p-2 ">
-                <FaLinkedinIn className="h-6 w-6 text-black " />
-              </Link>
-
-              <Link target="_blank" to="" className=" p-2 ">
-                <FaGithub className="h-6 w-6 text-black " />
-              </Link>
-            </div>
-          </div>
-          
+          ))}
         </div>
       </div>
     </div>
