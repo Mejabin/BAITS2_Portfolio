@@ -71,10 +71,10 @@ const Footer = () => {
           </Link>
    
     </div>
-      
+      </div>
     </footer>
   
-  )
-}
+  );
+};
 
 export default Footer

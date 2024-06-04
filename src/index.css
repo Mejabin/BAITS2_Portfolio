@@ -4,4 +4,43 @@
 .clip-half-circle {
     clip-path: inset(0 0 50% 0);
   }
-  
+  /* custom-dropdown.css */
+.custom-dropdown {
+  position: relative;
+}
+
+.custom-dropdown-trigger {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-dropdown-content {
+  position: absolute;
+  background: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  z-index: 1000;
+}
+
+.custom-dropdown-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.custom-dropdown-icon {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.custom-dropdown-title {
+  font-weight: bold;
+}
+
+.custom-dropdown-description {
+  margin-top: 4px;
+  font-size: 14px;
+}
