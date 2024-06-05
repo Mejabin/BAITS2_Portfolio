@@ -1,4 +1,4 @@
-import Bgabout from "../../../assets/Bgabout.jpg";
+// import Bgabout from "../../../assets/Bgabout.jpg";
 import { Link } from "react-router-dom";
 import MissionImage from "../../../assets/mission.png";
 import VisionImage from "../../../assets/vission.png";
@@ -7,7 +7,7 @@ import raffin from "../../../assets/raffin.png";
 import Asma from "../../../assets/Asma.png";
 import sami from "../../../assets/sami.jpg";
 import sayem from "../../../assets/sayem.jpeg";
-// import tanvir from "../../../assets/tanvir.png";
+import tanvir from "../../../assets/tanvir.png";
 import rashed from "../../../assets/rashed.jpeg";
 import Mehzabin from "../../../assets/Mehzabin.jpg";
 import Ajmira from "../../../assets/Ajmira.png";
@@ -191,9 +191,9 @@ const AboutUs = () => {
 
   return (
     <div>
-      <div
+      {/* <div
         className="min-h-[500px] flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: `url(${Bgabout})` }}
+        // style={{ backgroundImage: `url(${Bgabout})` }}
       >
         <div className="p-4">
           <h1 className="text-white text-center text-6xl">
@@ -221,7 +221,7 @@ const AboutUs = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 mt-4 p-28">

@@ -1,30 +1,62 @@
-import m1 from '../../../assets/m1.png';
-import m2 from '../../../assets/m2.png';
-
+import  { useEffect } from 'react';
 
 
 const Product = () => {
-  return (
-    <div className="bg-gray-100 text-black py-24 mt-0 p-8 ">
-      <div className="container mx-auto text-center">
-        <h1 className="text-4xl font-bold mb-4">Dedicated Product Company</h1>
-        <h1 className="text-2xl  mb-4">Enhance Your Web Building Experience</h1>
-        <p className="text-lg mb-8">Explore our range of products designed to make your web development journey smoother.</p>
-        <div className="flex justify-center items-center gap-36">
-          <div className=" ">
-            <img src={m1} alt="" className="w-96 h-72 rounded-3xl" />
-          </div>
-          <div className=" ">
-            <img src={m2} alt="" className="w-full h-72 rounded-3xl" />
-          </div>
+    useEffect(() => {
+        const parent = document.querySelector('.splitview');
+        const topPanel = parent.querySelector('.top');
+        const handle = parent.querySelector('.handle');
+        let skewHack = 0;
+        let delta = 0;
+
+        // If the parent has .skewed class, set the skewHack var.
+        if (parent.classList.contains('skewed')) {
+            skewHack = 1000;
+        }
+
+        const handleMouseMove = (event) => {
+            // Get the delta between the mouse position and center point.
+            delta = (event.clientX - window.innerWidth / 2) * 0.5;
+
+            // Move the handle.
+            handle.style.left = event.clientX + delta + 'px';
+
+            // Adjust the top panel width.
+            topPanel.style.width = event.clientX + skewHack + delta + 'px';
+        };
+
+        parent.addEventListener('mousemove', handleMouseMove);
+
+        return () => {
+            parent.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []); // Empty dependency array ensures the effect runs only once after mount
+
+    return (
+        <div className="splitview skewed">
+            <div className="panel bottom">
+                <div className="content">
+                    <div className="description">
+                        <h1>The original image.</h1>
+                        <p>This is how the image looks like before applying a duotone effect.</p>
+                    </div>
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/original-image.jpg" alt="Original" />
+                </div>
+            </div>
+
+            <div className="panel top">
+                <div className="content">
+                    <div className="description">
+                        <h1>The duotone image.</h1>
+                        <p>This is how the image looks like after applying a duotone effect.</p>
+                    </div>
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/duotone-image.jpg" alt="Duotone" />
+                </div>
+            </div>
+
+            <div className="handle"></div>
         </div>
-       <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-8">
-          Explore Products
-        </button>
-      
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Product;
