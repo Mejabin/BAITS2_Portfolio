@@ -31,9 +31,6 @@ const Footer = () => {
             <div>
               <p>Email</p>
             </div>
-            
-
-
           </div>
          
           <div className="mr-12">
@@ -63,7 +60,9 @@ const Footer = () => {
           
         </div>
       </div>
-      <div className="bg-gray-100 mb-4 ">
+     
+      </div>
+      <div className="bg-gray-100 ">
         <Link>
         <p className="mt-2 text-center text-2xl">
             &copy; {new Date().getFullYear()} Baitsbd.com. All rights reserved.
@@ -71,7 +70,6 @@ const Footer = () => {
           </Link>
    
     </div>
-      </div>
     </footer>
   
   );
