@@ -11,6 +11,8 @@ import tanvir from "../../../assets/tanvir.png";
 import rashed from "../../../assets/rashed.jpeg";
 import Mehzabin from "../../../assets/Mehzabin.jpg";
 import Ajmira from "../../../assets/Ajmira.png";
+import Mim from "../../../assets/Mim.jpeg.jpg";
+import CEE from "../../../assets/Saikat.jpg";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 const AboutUs = () => {
@@ -79,9 +81,47 @@ const AboutUs = () => {
 
   const teamMembers = [
     {
+      id: 887,
+      name: " ",
+      position: " ",
+      image: " ",
+      socials: {
+        facebook: "",
+        twitter: "",
+        linkedin: "",
+        github: "",
+      },
+    },
+    {
       id: 1,
+      name: "KK uddin Saikat",
+      position: "CEE",
+      image: CEE,
+      socials: {
+        facebook: "",
+        twitter: "",
+        linkedin: "",
+        github: "",
+      },
+    },
+
+    {
+      id: 888,
+      name: " ",
+      position: " ",
+      image: " ",
+      socials: {
+        facebook: "",
+        twitter: "",
+        linkedin: "",
+        github: "",
+      },
+    },
+
+    {
+      id: 2,
       name: "Md. Raffin Hossain",
-      position: "Senior Software Developer",
+      position: "Software Developer",
       image: raffin,
       socials: {
         facebook: "",
@@ -91,9 +131,9 @@ const AboutUs = () => {
       },
     },
     {
-      id: 2,
+      id: 3,
       name: "Asma Akter",
-      position: "Senior Software Developer",
+      position: " Software Developer",
       image: Asma,
       socials: {
         facebook: "",
@@ -103,32 +143,7 @@ const AboutUs = () => {
       },
     },
     {
-      id: 3,
-      name: "Abu Saadat Md. Sayem",
-      position: "Senior Software Developer",
-      image: sayem,
-      socials: {
-        facebook: "",
-        twitter: "",
-        linkedin: "",
-        github: "",
-      },
-    },
-    {
-      id: 2,
-      name: "Tanvir Hossain Sadi",
-      position: "Jr.Software Developer",
-      image: tanvir,
-      socials: {
-        facebook: "",
-        twitter: "",
-        linkedin: "",
-        github: "",
-      },
-    },
-   
-    {
-      id: 3,
+      id: 6,
       name: "M.H. Rashed",
       position: "Business Developer",
       image: rashed,
@@ -140,7 +155,19 @@ const AboutUs = () => {
       },
     },
     {
-      id: 6,
+      id: 4,
+      name: "Abu Saadat Md. Sayem",
+      position: " Software Developer",
+      image: sayem,
+      socials: {
+        facebook: "",
+        twitter: "",
+        linkedin: "",
+        github: "",
+      },
+    },
+    {
+      id: 7,
       name: "Sabbir Mohammad Sami",
       position: "Jr.Software Developer",
       image: sami,
@@ -152,7 +179,20 @@ const AboutUs = () => {
       },
     },
     {
-      id: 7,
+      id: 5,
+      name: "Tanvir Hossain Sadi",
+      position: "Jr.Software Developer",
+      image: tanvir,
+      socials: {
+        facebook: "",
+        twitter: "",
+        linkedin: "",
+        github: "",
+      },
+    },
+
+    {
+      id: 8,
       name: "Tasnim Mehzabin Khan",
       position: "Jr. Software Developer",
       image: Mehzabin,
@@ -164,7 +204,7 @@ const AboutUs = () => {
       },
     },
     {
-      id: 8,
+      id: 9,
       name: "Ajmira",
       position: "Jr. Software Developer",
       image: Ajmira,
@@ -176,10 +216,10 @@ const AboutUs = () => {
       },
     },
     {
-      id: 3,
-      name: "M.H. Rashed",
-      position: "Business Developer",
-      image: rashed,
+      id: 10,
+      name: "Sumaiya Parveen",
+      position: "Coordinator",
+      image: Mim,
       socials: {
         facebook: "",
         twitter: "",
@@ -191,45 +231,13 @@ const AboutUs = () => {
 
   return (
     <div>
-      {/* <div
-        className="min-h-[500px] flex items-center justify-center bg-cover bg-center"
-        // style={{ backgroundImage: `url(${Bgabout})` }}
-      >
-        <div className="p-4">
-          <h1 className="text-white text-center text-6xl">
-            IT Solutions for Your Business
-          </h1>
-          <p className="mt-4 text-center text-xl text-gray-100">
-            Information technology plays a prominent role in business and
-            provides <br />a foundation for much of our current workforce. From
-            communications <br />
-            to data management and operational efficiency, IT supports many
-            business <br />
-            functions and helps drive productivity.
-            <br />
-          </p>
-          <div className="flex justify-center mt-4 space-x-4">
-            <Link to="/learn-more">
-              <button className="bg-teal-500 text-white px-4 py-2 rounded">
-                Learn More
-              </button>
-            </Link>
-            <Link to="/get-in-touch">
-              <button className="bg-teal-500 text-white px-4 py-2 rounded">
-                Get in Touch
-              </button>
-            </Link>
-          </div>
-        </div>
-      </div> */}
-
       <div className="mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 mt-4 p-28">
+        <div className="grid grid-cols-1 md:grid-cols-3  mt-4 p-28">
           {sections.map((section, index) => (
             <div
               key={section.id}
               className={`rounded-full ${
-                index < sections.length - 0 ? "border-r border-black" : ""
+                index < sections.length - 0 ? "border-r border-gray-300" : ""
               }`}
             >
               <div className="flex justify-center">
@@ -237,21 +245,25 @@ const AboutUs = () => {
                   <img
                     src={section.image}
                     alt={section.heading}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover filter grayscale contrast-150"
                   />
                 </div>
               </div>
               <h2 className="text-2xl font-bold text-center uppercase">
                 {section.heading}
               </h2>
-              <p className="text-center text-lg p-10">{section.description}</p>
+              <p className="text-center text-lg p-10 text-gray-600">
+                {section.description}
+              </p>
             </div>
           ))}
         </div>
       </div>
 
       <div className="mb-8 p-12 bg-gray-100">
-        <p className="text-center text-3xl mt-2 font-bold">Why Choose Us</p>
+        <p className="text-center text-3xl mt-2 font-bold text ">
+          Why Choose Us
+        </p>
         <div className="p-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((item) => (
             <div className="flex items-start" key={item.id}>
@@ -276,11 +288,17 @@ const AboutUs = () => {
               <img
                 src={member.image}
                 alt={member.name}
-                className="h-[200px] w-[200px] rounded-full border-green-700 border-2"
+                className={`h-[200px] w-[200px] rounded-full border-green-700 ${
+                  member.name == " " ? " border-0" : " border-2"
+                }`}
               />
               <h1 className="mt-1 text-lg font-bold">{member.name}</h1>
               <p className="mt-1 text-lg font-bold">{member.position}</p>
-              <div className="flex flex-row justify-center gap-2 mt-2">
+              <div
+                className={`${
+                  member.name == " " ? "hidden" : "flex"
+                } flex-row justify-center gap-2 mt-2`}
+              >
                 <Link
                   target="_blank"
                   to={member.socials.facebook}

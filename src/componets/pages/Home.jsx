@@ -183,16 +183,16 @@ const Home = () => {
               </div>
               <div
                 className="text-white absolute bottom-60
-                 left-1/2 transform -translate-x-1/2"
-                style={{ zIndex: 2, whiteSpace: "nowrap" }}
+                 left-1/2 transform -translate-x-1/2 z-50"
+                style={{ zIndex: 999, whiteSpace: "nowrap" }}
               >
-                <div className="flex justify-center mt-4 space-x-4">
+                <div className="flex justify-center mt-4 space-x-4 z-50">
                   <Link to="/learn-more">
                     <button className="bg-teal-500 text-white px-4 py-2 rounded">
                       Learn More
                     </button>
                   </Link>
-                  <Link to="/get-in-touch">
+                  <Link to="/contact">
                     <button className="bg-teal-500 text-white px-4 py-2 rounded">
                       Get in Touch
                     </button>
