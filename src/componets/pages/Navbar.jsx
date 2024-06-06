@@ -81,7 +81,7 @@ const Navbar = () => {
           />
 
           <li>
-            <Link href="/support" className="text-gray-600 hover:text-gray-400">
+            <Link to="/support" className="text-gray-600 hover:text-gray-400">
               Support
             </Link>
           </li>

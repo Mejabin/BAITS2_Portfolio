@@ -105,7 +105,7 @@ const AboutUs = () => {
     {
       id: 3,
       name: "Abu Saadat Md. Sayem",
-      position: "Senior Software Developer",
+      position: "Software Developer",
       image: sayem,
       socials: {
         facebook: "",
@@ -117,7 +117,7 @@ const AboutUs = () => {
     {
       id: 4,
       name: "Tanvir Hossain Sadi",
-      position: "Jr.Software Developer",
+      position: "Jr. Software Developer",
       image: tanvir,
       socials: {
         facebook: "",
@@ -141,7 +141,7 @@ const AboutUs = () => {
     {
       id: 6,
       name: "Sabbir Mohammad Sami",
-      position: "Jr.Software Developer",
+      position: "Jr. Software Developer",
       image: sami,
       socials: {
         facebook: "",
@@ -183,17 +183,16 @@ const AboutUs = () => {
         style={{ backgroundImage: `url(${Bgabout})` }}
       >
         <div className="p-4">
-          <h1 className="text-white text-center text-6xl">
+          <h1 className="text-white text-center text-3xl md:text-6xl">
             IT Solutions for Your Business
           </h1>
-          <p className="mt-4 text-center text-xl text-gray-100">
+          <p className="mt-4 text-center text-lg md:text-xl text-gray-100">
             Information technology plays a prominent role in business and
-            provides <br />a foundation for much of our current workforce. From
-            communications <br />
+            provides <br className="hidden md:block" /> a foundation for much of our current workforce. From
+            communications <br className="hidden md:block" />
             to data management and operational efficiency, IT supports many
-            business <br />
+            business <br className="hidden md:block" />
             functions and helps drive productivity.
-            <br />
           </p>
           <div className="flex justify-center mt-4 space-x-4">
             <Link to="/learn-more">
@@ -210,42 +209,50 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className=" mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 mt-4 p-28 ">
+      {/* Mission, Vision, and Values Section */}
+      <div className="mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 mt-4 p-6 md:p-28">
           {sections.map((section, index) => (
             <div
               key={section.id}
               className={`rounded-full ${
-                index < sections.length - 0 ? "border-r border-black" : ""
+                index < sections.length - 0 ? "md:border-r-4 border-black" : ""
               }`}
             >
               <div className="flex justify-center">
-                <div className="w-40 h-40 mb-4 overflow-hidden">
+                <div className="w-32 h-32 md:w-40 md:h-40 mb-4 overflow-hidden rounded-full">
                   <img
                     src={section.image}
                     alt={section.heading}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover mt-2"
                   />
                 </div>
               </div>
-              <h2 className="text-2xl font-bold text-center uppercase">
+              <h2 className="text-xl md:text-2xl font-bold text-center uppercase">
                 {section.heading}
               </h2>
-              <p className="text-center text-lg p-10">{section.description}</p>
+              <p className="text-center text-md md:text-lg p-4 md:p-10">
+                {section.description}
+              </p>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="mb-8 p-12 bg-gray-100">
-        <p className="text-center text-3xl mt-2 font-bold">Why Choose Us</p>
-        <div className="p-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Why Choose Us Section */}
+      <div className="mb-8 p-6 md:p-12 bg-gray-100">
+        <p className="text-center text-2xl md:text-3xl mt-2 font-bold">
+          Why Choose Us
+        </p>
+        <div className="p-8 md:p-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((item) => (
             <div className="flex items-start" key={item.id}>
-              <p className="text-4xl font-bold mr-4">{item.id}</p>
+              <p className="text-2xl md:text-4xl font-bold mr-4">{item.id}</p>
               <div className="border-l-4 border-gray-500 h-16 mr-4"></div>
               <div>
-                <p className="text-2xl font-semibold">{item.title}</p>
+                <p className="text-xl md:text-2xl font-semibold">
+                  {item.title}
+                </p>
                 <p>{item.description}</p>
               </div>
             </div>
@@ -253,35 +260,46 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="mt-2">
-        <h1 className="text-center text-4xl font-bold">Meet Our Team</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4 p-12">
-          {teamMembers.map((member) => (
-            <div key={member.id} className="flex flex-col items-center">
-              <img
-                src={member.image}
-                alt={member.name}
-                className="h-[200px] w-[200px] rounded-full"
-              />
-              <h1 className="mt-1 text-lg font-bold">{member.name}</h1>
-              <p className="mt-1 text-lg font-bold">{member.position}</p>
-              <div className="flex flex-row justify-center gap-2 mt-2">
+      {/* Meet Our Team Section */}
+      <div className="p-6 md:p-12">
+        <h1 className="text-center text-3xl md:text-5xl font-bold text-[#01723C]">
+          Meet Our Team
+        </h1>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 md:p-12 mb-8">
+        {teamMembers.map((member) => (
+          <div key={member.id} className="flex flex-col items-center">
+            <img
+              src={member.image}
+              alt={member.name}
+              className="h-40 w-40 md:h-48 md:w-48 rounded-full border-green-700 border-2"
+            />
+            <h1 className="mt-2 text-lg font-normal">{member.name}</h1>
+            <p className="mt-1 text-lg">{member.position}</p>
+            <div className="flex flex-row justify-center gap-2 mt-2">
+              {member.socials.facebook && (
                 <Link target="_blank" to={member.socials.facebook} className="p-2">
-                  <FaFacebookF className="h-6 w-6 text-black " />
+                  <FaFacebookF className="h-6 w-6 text-[#01723C]" />
                 </Link>
-                <Link target="_blank" to={member.socials.twitter} className=" p-2 ">
-                  <FaTwitter className="h-6 w-6 text-black " />
+              )}
+              {member.socials.twitter && (
+                <Link target="_blank" to={member.socials.twitter} className="p-2">
+                  <FaTwitter className="h-6 w-6 text-[#01723C]" />
                 </Link>
-                <Link target="_blank" to={member.socials.linkedin} className=" p-2 ">
-                  <FaLinkedinIn className="h-6 w-6 text-black " />
+              )}
+              {member.socials.linkedin && (
+                <Link target="_blank" to={member.socials.linkedin} className="p-2">
+                  <FaLinkedinIn className="h-6 w-6 text-[#01723C]" />
                 </Link>
-                <Link target="_blank" to={member.socials.github} className=" p-2 ">
-                  <FaGithub className="h-6 w-6 text-black " />
+              )}
+              {member.socials.github && (
+                <Link target="_blank" to={member.socials.github} className="p-2">
+                  <FaGithub className="h-6 w-6 text-[#01723C]" />
                 </Link>
-              </div>
+              )}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );
