@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+/* HEADING STYLE  */
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg text {
+  text-transform: uppercase;
+  fill: transparent;
+  stroke: #555555;
+  stroke-width: 1px;
+  animation: animated-stroke 5s;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+@keyframes animated-stroke {
+  0% {
+    stroke-dasharray: 0 80%;
+  }
+  100% {
+    stroke-dasharray: 10% 0%;
+    stroke-dashoffset: 25%;
+  }
+}
+
 /* NAVBAR BUTTON HOVER EFFECT */
 .button-container {
   position: relative;
