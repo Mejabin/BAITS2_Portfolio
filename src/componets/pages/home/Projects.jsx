@@ -38,26 +38,26 @@ const Projects = () => {
   ];
 
   return (
-    <section className="container mx-auto">
-      <div className="py-32">
+    <section className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="py-16 sm:py-24">
         <Heading text={"Our Projects"} />
 
-        <p className="text-sm ps-1">
+        <p className="text-sm ps-1 my-3">
           Over 6 Million+ clients use our products to build & grow their
           websites
         </p>
-        <div className="mt-8 py-4 flex flex-col md:flex-row justify-center items-center gap-8">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="relative bg-gray-200 rounded-lg h-full hover:bg-emerald-600 transition duration-300 p-1 group"
+              className="relative bg-gray-200 rounded-lg hover:bg-emerald-600 transition duration-300 p-1 group"
             >
               <img
                 src={project.img}
                 alt={project.title}
                 className="w-full rounded-t-md border"
               />
-              <div className="bg-white rounded-b-md text-justify px-6 pt-4 pb-8 object-cover">
+              <div className="bg-white rounded-b-md text-justify px-6 pt-4 pb-8">
                 {project.link ? (
                   <a href={project.link} className="text-black">
                     <p className="mt-4 text-2xl font-light">{project.title}</p>
@@ -72,9 +72,9 @@ const Projects = () => {
                   <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
                   <a
                     href={project.link}
-                    className="relative  text-white flex items-center justify-center shadow-lg w-32 h-32 rounded-full border-2 border-white p-6 gap-1.5"
+                    className="relative text-white flex items-center justify-center shadow-lg w-32 h-32 rounded-full border-2 border-white p-6 gap-1.5"
                   >
-                    <p className="font-medium">See More</p>{" "}
+                    <p className="font-medium">See More</p>
                     <IoMdArrowForward className="text-2xl -rotate-45" />
                   </a>
                 </div>

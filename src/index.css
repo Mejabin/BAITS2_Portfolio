@@ -4,20 +4,12 @@
 
 /* HEADING STYLE  */
 
-@mixin flexCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 svg text {
   text-transform: uppercase;
   fill: transparent;
   stroke: #555555;
   stroke-width: 1px;
   animation: animated-stroke 5s;
-  text-anchor: middle;
-  dominant-baseline: middle;
 }
 
 @keyframes animated-stroke {
@@ -139,21 +131,23 @@ body {
 .splitview {
   position: relative;
   width: 100%;
-  min-height: 45vw;
+  width: 0 auto;
+  min-height: 35vw;
   overflow: hidden;
 }
 
 .panel {
   position: absolute;
   width: 100vw;
-  min-height: 45vw;
+  min-height: 35vw;
   overflow: hidden;
 }
 
 .panel .content {
   position: absolute;
   width: 100vw;
-  min-height: 45vw;
+  width: 0 auto;
+  min-height: 35vw;
   color: #fff;
 }
 
@@ -184,7 +178,7 @@ body {
 }
 
 .top {
-  background-color: rgb(77, 69, 173);
+  background-color: #059669;
   z-index: 2;
   width: 50vw;
 
