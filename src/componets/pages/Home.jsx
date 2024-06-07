@@ -101,13 +101,13 @@ RotatingIcon.defaultProps = {
 };
 
 const Home = () => {
-  const radius2 = 500;
-  const radius3 = 600;
-  const radius4 = 700;
-  const radius5 = 500;
+  const radius2 = 680;
+  const radius3 = 780;
+  const radius4 = 880;
+  const radius5 = 680;
 
   return (
-    <div className="bg-[#0A0C3E] h-screen flex justify-center items-center relative overflow-hidden">
+    <div className="bg-black h-screen flex justify-center items-center relative overflow-hidden">
       <div className="-mb-[70rem]">
         <div className="relative">
           <div className="position-relative">
@@ -165,19 +165,23 @@ const Home = () => {
               />
             </div>
 
-            <div className="relative">
+            <div className="relative text-white">
               <div
-                className="text-white text-2xl font-bold absolute bottom-72 left-1/2 transform -translate-x-1/2"
+                className=" absolute bottom-80 left-1/2 transform -translate-x-1/2"
                 style={{ zIndex: 2, whiteSpace: "nowrap" }}
               >
-                <span className="text-[#01723B]">Power</span> Up Your IT
-                solution with <span className="text-green-500">BAITS</span>
-                <p className="mt-4 text-center text-sm text-gray-100">
+                <h2 className="text-4xl font-extralight">
+                  Supercharge Your IT Solution with
+                </h2>
+                <h2 className="text-5xl -mt-7 font-semibold">
+                  Bangladesh Associate of IT Solution
+                </h2>
+                <p className="mt-2 text-center text-sm ">
                   Information technology plays a prominent role in business and
-                  provides <br /> a foundation for much of our current
-                  workforce. From communications <br /> to data management and
-                  operational efficiency, IT supports many business <br />{" "}
-                  functions and helps drive productivity.
+                  provides a foundation for much of our current workforce.{" "}
+                  <br /> From communications to data management and operational
+                  efficiency, IT supports many business functions and helps
+                  drive productivity.
                   <br />
                 </p>
               </div>
@@ -186,14 +190,14 @@ const Home = () => {
                  left-1/2 transform -translate-x-1/2 z-50"
                 style={{ zIndex: 999, whiteSpace: "nowrap" }}
               >
-                <div className="flex justify-center mt-4 space-x-4 z-50">
+                <div className="flex justify-center mt-4 space-x-3 z-50">
                   <Link to="/learn-more">
-                    <button className="bg-teal-500 text-white px-4 py-2 rounded">
+                    <button className="bg-emerald-600 text-white rounded-full px-8 py-3">
                       Learn More
                     </button>
                   </Link>
                   <Link to="/contact">
-                    <button className="bg-teal-500 text-white px-4 py-2 rounded">
+                    <button className="bg-emerald-600 text-white rounded-full px-8 py-3">
                       Get in Touch
                     </button>
                   </Link>

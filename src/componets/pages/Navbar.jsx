@@ -4,7 +4,7 @@ import { IoMdArrowForward } from "react-icons/io";
 
 const Navbar = () => {
   return (
-    <nav className="bg-transparent bg-opacity-90 py-8 container mx-auto">
+    <nav className="bg-transparent bg-opacity-90 py-6 container mx-auto">
       <div className="flex flex-col md:flex-row justify-between items-center">
         {/* Left side logo */}
         <div className="flex items-center gap-5">
