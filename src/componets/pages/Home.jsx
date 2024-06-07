@@ -170,10 +170,10 @@ const Home = () => {
                 className=" absolute bottom-80 left-1/2 transform -translate-x-1/2"
                 style={{ zIndex: 2, whiteSpace: "nowrap" }}
               >
-                <h2 className="text-4xl font-extralight">
+                <h2 className="text-4xl font-extralight text-center pb-1.5">
                   Supercharge Your IT Solution with
                 </h2>
-                <h2 className="text-5xl -mt-7 font-semibold">
+                <h2 className="text-5xl font-semibold">
                   Bangladesh Associate of IT Solution
                 </h2>
                 <p className="mt-2 text-center text-sm ">
