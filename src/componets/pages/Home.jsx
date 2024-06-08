@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   SiCss3,
   SiJavascript,
@@ -10,6 +11,10 @@ import {
 import { DiMongodb } from "react-icons/di";
 import { IoLogoLaravel } from "react-icons/io5";
 import { FaNodeJs, FaPhp } from "react-icons/fa";
+import { FaWordpress } from "react-icons/fa";
+import { TbSeo } from "react-icons/tb";
+import { SiBmcsoftware } from "react-icons/si";
+import { SiAdminer } from "react-icons/si";
 import PropTypes from "prop-types";
 
 const RotatingIcon = ({
@@ -127,6 +132,14 @@ const Home = () => {
                 startFrom={0}
               />
               <RotatingIcon
+                icon={TbSeo}
+                size={35}
+                delay={3500}
+                radius={radius2}
+                color="#2D3A8F"
+                startFrom={300}
+              />
+              <RotatingIcon
                 icon={SiTailwindcss}
                 size={35}
                 delay={3500}
@@ -152,25 +165,42 @@ const Home = () => {
               />
             </div>
 
-            <div
-              className="text-white text-4xl font-bold absolute bottom-80 left-1/2 transform -translate-x-1/2"
-              style={{ zIndex: 2, whiteSpace: "nowrap" }}
-            >
-              <span className="text-[#01723B]">Power</span> Up Your IT solution
-              with <span className="text-green-500">BAITS</span>
+            <div className="relative">
+              <div
+                className="text-white text-2xl font-bold absolute bottom-72 left-1/2 transform -translate-x-1/2"
+                style={{ zIndex: 2, whiteSpace: "nowrap" }}
+              >
+                <span className="text-[#01723B]">Power</span> Up Your IT
+                solution with <span className="text-green-500">BAITS</span>
+                <p className="mt-4 text-center text-sm text-gray-100">
+                  Information technology plays a prominent role in business and
+                  provides <br /> a foundation for much of our current
+                  workforce. From communications <br /> to data management and
+                  operational efficiency, IT supports many business <br />{" "}
+                  functions and helps drive productivity.
+                  <br />
+                </p>
+              </div>
+              <div
+                className="text-white absolute bottom-60
+                 left-1/2 transform -translate-x-1/2"
+                style={{ zIndex: 2, whiteSpace: "nowrap" }}
+              >
+                <div className="flex justify-center mt-4 space-x-4">
+                  <Link to="/learn-more">
+                    <button className="bg-teal-500 text-white px-4 py-2 rounded">
+                      Learn More
+                    </button>
+                  </Link>
+                  <Link to="/get-in-touch">
+                    <button className="bg-teal-500 text-white px-4 py-2 rounded">
+                      Get in Touch
+                    </button>
+                  </Link>
+                </div>
+              </div>
             </div>
-            <div className="text-white  font-bold absolute bottom-72 left-1/2 transform -translate-x-1/2"
-              style={{ zIndex: 2, whiteSpace: "nowrap" }} >
-              
-              <p>
-                We Build Advanced SoftWare To Help Your Business Grow
-              </p>
-            </div>
-            <button>
-              
-            </button>
           </div>
-
 
           {/* Circular path 3 */}
           <div
@@ -193,6 +223,14 @@ const Home = () => {
               startFrom={250}
             />
             <RotatingIcon
+              icon={SiBmcsoftware}
+              size={35}
+              delay={3500}
+              radius={radius3}
+              color="#F7DFE"
+              startFrom={280}
+            />
+            <RotatingIcon
               icon={FaNodeJs}
               size={35}
               delay={4000}
@@ -201,12 +239,20 @@ const Home = () => {
               startFrom={280}
             />
             <RotatingIcon
-              icon={SiJavascript}
+              icon={SiAdminer}
               size={35}
               delay={3600}
               radius={radius3}
-              color="#F7DF1E"
+              color="#F9DF1E"
               startFrom={200}
+            />
+            <RotatingIcon
+              icon={FaWordpress}
+              size={35}
+              delay={3400}
+              radius={radius3}
+              color="#207196"
+              startFrom={250}
             />
           </div>
           {/* Circular path 4 */}

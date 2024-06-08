@@ -7,20 +7,20 @@ import Ourclients from "./componets/pages/home/Ourclients";
 // import Footer from "./componets/pages/Footer";
 import Home from "./componets/pages/Home";
 import Testimonial from "./componets/pages/home/Testimonial";
+import AboutUs from "./componets/pages/about/AboutUs";
 
 function App() {
   return (
     <div>
-    
-     
       <Home />
+      <AboutUs />
       <Product />
       <Features />
       <Company />
       <ProductQuality />
       <Ourclients />
       <Testimonial />
-    
+
       {/* comment */}
       {/* <Footer /> */}
     </div>

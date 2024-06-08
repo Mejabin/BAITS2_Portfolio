@@ -8,7 +8,7 @@ const Features = () => {
   return (
     <div className="mt-16">
       <h1 className="text-6xl text-center font-bold">
-        Featured Products
+       Our Projects
       </h1>
       <p className="text-center text-lg mt-4 font-semibold">
         Over 6 Million+ clients use our products to build & grow their websites
