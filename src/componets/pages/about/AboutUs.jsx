@@ -284,19 +284,24 @@ const AboutUs = () => {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4 p-12">
           {teamMembers.map((member) => (
-            <div key={member.id} className="flex flex-col items-center">
+            <div
+              key={member.id}
+              className={`flex flex-col items-center bg-white rounded-lg  p-6 ${
+                member.name == " " ? "shadow-none" : "shadow-md"
+              }`}
+            >
               <img
                 src={member.image}
                 alt={member.name}
                 className={`h-[200px] w-[200px] rounded-full border-green-700 ${
-                  member.name == " " ? " border-0" : " border-2"
+                  member.name === " " ? "border-0" : "border-2"
                 }`}
               />
               <h1 className="mt-1 text-lg font-bold">{member.name}</h1>
               <p className="mt-1 text-lg font-bold">{member.position}</p>
               <div
                 className={`${
-                  member.name == " " ? "hidden" : "flex"
+                  member.name === " " ? "hidden" : "flex"
                 } flex-row justify-center gap-2 mt-2`}
               >
                 <Link
