@@ -7,13 +7,13 @@ import Ourclients from "./componets/pages/home/Ourclients";
 import Home from "./componets/pages/Home";
 import Testimonial from "./componets/pages/home/Testimonial";
 import AboutUs from "./componets/pages/about/AboutUs";
-import Features from "./componets/pages/home/Features";
+import Projects from "./componets/pages/home/Projects";
 
 function App() {
   return (
     <div>
       <Home />
-      <Features/>
+      <Projects />
       <Product />
       <AboutUs />
       <Company />

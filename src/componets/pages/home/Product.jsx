@@ -2,6 +2,7 @@ import { useEffect } from "react";
 // import Nedubd from "./../../../assets/Nedubd.png";
 import Back from "./../../../assets/Back.jpg";
 import Front from "./../../../assets/front.jpg";
+import Heading from "../../shared/Heading";
 
 const Product = () => {
   useEffect(() => {
@@ -31,42 +32,48 @@ const Product = () => {
   }, []);
 
   return (
-    <div className="splitview skewed">
-      <div className="panel bottom">
-        <div className="content">
-          <div className="description">
-            <h1 className="text-2xl">Nedubd</h1>
-            <p>
-              We are the pioneers of innovation in education management
-              software. Discover with us the possibilities of your school,
-              College, Madrasha, Polytechnic, Mats/IHT,or University.
-            </p>
-          </div>
-          <img src={Back} alt="Original" />
-        </div>
+    <section>
+      <div className="container mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <Heading text={"NEDUBD"} />
       </div>
-
-      <div className="panel top">
-        <div className="content">
-          <div className="description">
-            <h1 className="text-2xl"> Our ERP System</h1>
-            <p>
-              NEDUBD is an educational institute management software aimed to
-              make administrative works of your institutions easy & smart. It
-              helps the administrators and teachers to perform their daily
-              activities smoothly and keep an eye on several other functions of
-              an institution so that it runs successfully. Moreover, guardians
-              remain up to date with their children’s progress. and Student
-              module allows Smartly keep your class & school activities Easily
-              and Effortlessly. NEDUBD is best suited to institutions
-            </p>
+      <div className="splitview skewed">
+        <div className="panel bottom">
+          <div className="content">
+            <div className="description">
+              <h1 className="text-3xl text-start">NEDUBD</h1>
+              <p className="text-start text-sm">
+                We are the pioneers of innovation in education management
+                software. Discover with us the possibilities of your school,
+                College, Madrasha, Polytechnic, Mats/IHT,or University.
+              </p>
+            </div>
+            <img src={Back} alt="Original" />
           </div>
-          <img src={Front} alt="Duotone" />
         </div>
-      </div>
 
-      <div className="handle"></div>
-    </div>
+        <div className="panel top">
+          <div className="content">
+            <div className="description space-y-6">
+              <h1 className="text-3xl text-end uppercase"> Our ERP System</h1>
+              <p className="text-end text-sm">
+                NEDUBD is an educational institute management software aimed to
+                make administrative works of your institutions easy & smart. It
+                helps the administrators and teachers to perform their daily
+                activities smoothly and keep an eye on several other functions
+                of an institution so that it runs successfully. Moreover,
+                guardians remain up to date with their children’s progress. and
+                Student module allows Smartly keep your class & school
+                activities Easily and Effortlessly. NEDUBD is best suited to
+                institutions
+              </p>
+            </div>
+            <img src={Front} alt="Duotone" />
+          </div>
+        </div>
+
+        <div className="handle"></div>
+      </div>
+    </section>
   );
 };
 

@@ -50,7 +50,7 @@ const OurClients = () => {
 
   return (
     <div className="container">
-      <h2 className="mt-12 text-4xl text-center font-bold">Our Partners</h2>
+      <h2 className="mt-12 text-4xl text-center font-bold p-5">Our Partners</h2>
       <Slider ref={sliderRef} {...settings}>
         <div className="slide">
           <img
