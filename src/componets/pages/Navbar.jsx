@@ -1,56 +1,17 @@
 import logo from "../../assets/logoTrans.png";
-
-import { RiArrowDropDownLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import { DiGithubFull } from "react-icons/di";
-import CustomDropdown from "../shared/CustomDropdown";
+import { IoMdArrowForward } from "react-icons/io";
+// import CustomDropdown from './path/to/CustomDropdown';
+
 
 const Navbar = () => {
-  const products = [
-    {
-      icon: <DiGithubFull />,
-      title: "Essential Addons for Elementor",
-      des: "Enhance your Elementor page building experience with 80+ amazing widgets",
-    },
-    {
-      icon: <DiGithubFull />,
-      title: "Essential Addons for Elementor",
-      des: "Enhance your Elementor page building experience with 80+ amazing widgets",
-    },
-    {
-      icon: <DiGithubFull />,
-      title: "Essential Addons for Elementor",
-      des: "Enhance your Elementor page building experience with 80+ amazing widgets",
-    },
-    {
-      icon: <DiGithubFull />,
-      title: "Essential Addons for Elementor",
-      des: "Enhance your Elementor page building experience with 80+ amazing widgets",
-    },
-  ];
-  // const [dropdownVisible, setDropdownVisible] = useState(false);
-
-  // // Function to show dropdown
-  // const showDropdown = () => {
-  //   setDropdownVisible(true);
-  // };
-
-  // // Function to hide dropdown
-  // const hideDropdown = () => {
-  //   setDropdownVisible(false);
-  // };
-
   return (
-    <nav className="bg-white/80 py-8">
-      <div className="mx-auto flex justify-between items-center">
+    <nav className="bg-transparent bg-opacity-90 py-6 container mx-auto  px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col md:flex-row justify-between items-center">
         {/* Left side logo */}
-        <div className="flex items-center mx-8">
-          <img
-            src={logo} // Path to your company logo
-            alt="Company Logo"
-            className="h-12 mr-4"
-          />
-          <span className="text-gray-600 font-bold text-lg">
+        <div className="flex items-center gap-5">
+          <img src={logo} alt="Company Logo" className="h-12 mr-4" />
+          <span className=" font-light text-xl">
             Bangladesh Associate of IT Solution
           </span>
         </div>
