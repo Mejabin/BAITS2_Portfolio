@@ -76,7 +76,7 @@ const OurClients = () => {
         <div className="slide">
           <img src={D5} alt="Partner Logo" />
         </div>
-        {/* Add other slides here */}
+        
       </Slider>
     </div>
   );
