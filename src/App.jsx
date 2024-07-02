@@ -6,7 +6,7 @@ import Ourclients from "./componets/pages/home/Ourclients";
 // import Footer from "./componets/pages/Footer";
 import Home from "./componets/pages/Home";
 
-import AboutUs from "./componets/pages/about/AboutUs";
+// import AboutUs from "./componets/pages/about/AboutUs";
 import Projects from "./componets/pages/home/Projects";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <Home />
       <Projects />
       <Product />
-      <AboutUs />
+      {/* <AboutUs /> */}
       <Company />
 
       <Ourclients />
