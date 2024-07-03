@@ -40,9 +40,9 @@ const Projects = () => {
   return (
     <section className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="py-16 sm:py-24">
-        <Heading text={"Our Projects"} />
+        <h1 className="text-center text-2xl font-semibold uppercase">Our Projects</h1>
 
-        <p className="text-sm ps-1 my-3">
+        <p className="text-sm ps-1 my-3 text-center text-xl">
           Over 6 Million+ clients use our products to build & grow their
           websites
         </p>

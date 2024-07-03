@@ -34,7 +34,8 @@ const Product = () => {
   return (
     <section>
       <div className="container mx-auto py-6 px-4 sm:px-6 lg:px-8">
-        <Heading text={"NEDUBD"} />
+        {/* <Heading text={"NEDUBD"} /> */}
+        <h1 className="text-center text-3xl font-bold ">NEDUBD</h1>
       </div>
       <div className="splitview skewed">
         <div className="panel bottom">

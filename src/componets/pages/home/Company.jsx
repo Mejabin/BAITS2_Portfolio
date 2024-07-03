@@ -58,7 +58,7 @@ const Company = () => {
   return (
     <div
       ref={containerRef}
-      className="bg-blue-950 py-32 translate-y-9 p-4 mb-20 flex flex-wrap justify-around items-center"
+      className="bg-blue-950 py-32 translate-y-9 p-12 mb-20 flex flex-wrap justify-around items-center"
     >
       <div className="flex flex-col items-center">
         <img src={years} alt="" className="w-24 h-24 rounded-3xl" />

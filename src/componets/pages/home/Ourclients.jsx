@@ -36,48 +36,50 @@ const OurClients = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
         },
       },
       {
         breakpoint: 520,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
     ],
   };
 
   return (
-    <div className="container">
-      <h2 className="mt-12 text-4xl text-center font-bold">Our Partners</h2>
-      <Slider ref={sliderRef} {...settings}>
-        <div className="slide">
-          <img
-            src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"
-            alt="Partner Logo"
-          />
-        </div>
-        <div className="slide">
-          <img src={Berger} alt="Partner Logo" />
-        </div>
-        <div className="slide">
-          <img src={Lams} alt="Partner Logo" />
-        </div>
-        <div className="slide">
-          <img src={C3} alt="Partner Logo" />
-        </div>
-        <div className="slide">
-          <img src={D3} alt="Partner Logo" />
-        </div>
-        <div className="slide">
-          <img src={D4} alt="Partner Logo" />
-        </div>
-        <div className="slide">
-          <img src={D5} alt="Partner Logo" />
-        </div>
-        
-      </Slider>
+    <div className="mt-6">
+      <h2 className="mt-12 text-4xl text-center font-bold uppercase">Our Partners</h2>
+      <div className="mt-12"> 
+        <Slider ref={sliderRef} {...settings}>
+          {/* Render your slider items */}
+          <div className="slide">
+            <img
+              src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"
+              alt="Partner Logo"
+            />
+          </div>
+          <div className="slide">
+            <img src={Berger} alt="Partner Logo" />
+          </div>
+          <div className="slide">
+            <img src={Lams} alt="Partner Logo" />
+          </div>
+          <div className="slide">
+            <img src={C3} alt="Partner Logo" />
+          </div>
+          <div className="slide">
+            <img src={D3} alt="Partner Logo" />
+          </div>
+          <div className="slide">
+            <img src={D4} alt="Partner Logo" />
+          </div>
+          <div className="slide">
+            <img src={D5} alt="Partner Logo" />
+          </div>
+        </Slider>
+      </div>
     </div>
   );
 };

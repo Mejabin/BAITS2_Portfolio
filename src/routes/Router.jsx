@@ -4,6 +4,7 @@ import RootLayout from "../componets/layouts/RootLayout";
 import Contact from "../componets/pages/contact/Contact";
 import Careers from "../componets/pages/careers/Careers";
 
+
 const Router = createBrowserRouter([
     {
         path: '/',
@@ -13,6 +14,7 @@ const Router = createBrowserRouter([
                 path: '/',
                 element: <App/>,
             },
+           
             {
                 path: '/contact',
                 element: <Contact/>,
