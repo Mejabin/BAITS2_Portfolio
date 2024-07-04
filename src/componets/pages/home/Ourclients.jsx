@@ -1,84 +1,56 @@
-import { useEffect, useRef } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import React from 'react';
 import Berger from "../../../assets/Clients/images.png";
 import Lams from "../../../assets/Clients/LAMS_Logo.png";
-import C3 from "../../../assets/Clients/c3.jpg";
 import D3 from "../../../assets/Clients/d.jpg";
 import D4 from "../../../assets/Clients/E.jpg";
-import D5 from "../../../assets/Clients/E1.jpg";
+import Pubali from "../../../assets/Clients/pubali.jpg"
+
+// import Pubali from "../../../assets/Clients/pubali.jpg";  
 
 const OurClients = () => {
-  const sliderRef = useRef(null);
-
-  useEffect(() => {
-    if (sliderRef.current) {
-      sliderRef.current.slickGoTo(0); // Reset slider to the first slide
-    }
-  }, []);
-
-  const settings = {
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    arrows: false,
-    dots: false,
-    pauseOnHover: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 520,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
+  const clients = [
+    {
+      src: "https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg",
+      alt: "Partner Logo 1",
+    },
+    {
+      src: Berger,
+      alt: "Berger Logo",
+    },
+    {
+      src: Lams,
+      alt: "Lams Logo",
+    },
+    {
+      src: D3,
+      alt: "D3 Logo",
+    },
+    {
+      src: D4,
+      alt: "D4 Logo",
+    },
+    {
+      src: Pubali,
+      alt: "Pubali Logo",
+    },
+  ];
 
   return (
-    <div className="mt-6">
-      <h2 className="mt-12 text-4xl text-center font-bold uppercase">Our Partners</h2>
-      <div className="mt-12"> 
-        <Slider ref={sliderRef} {...settings}>
-          {/* Render your slider items */}
-          <div className="slide">
+    <div className="container mx-auto px-4 py-16">
+      <h2 className="text-3xl md:text-4xl text-center font-bold mb-8">OUR CLIENTS</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+        {clients.map((client, index) => (
+          <div 
+            key={index} 
+            className="flex justify-center items-center p-3 border border-gray-200 shadow-md rounded-lg transition-transform transform hover:scale-105"
+          >
             <img
-              src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"
-              alt="Partner Logo"
+              src={client.src}
+              alt={client.alt}
+              className="h-20 md:h-28 lg:h-36 mx-auto"
             />
           </div>
-          <div className="slide">
-            <img src={Berger} alt="Partner Logo" />
-          </div>
-          <div className="slide">
-            <img src={Lams} alt="Partner Logo" />
-          </div>
-          <div className="slide">
-            <img src={C3} alt="Partner Logo" />
-          </div>
-          <div className="slide">
-            <img src={D3} alt="Partner Logo" />
-          </div>
-          <div className="slide">
-            <img src={D4} alt="Partner Logo" />
-          </div>
-          <div className="slide">
-            <img src={D5} alt="Partner Logo" />
-          </div>
-        </Slider>
+        ))}
       </div>
     </div>
   );
